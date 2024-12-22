@@ -7,8 +7,6 @@ WORKDIR /app
 # Copy the project files to the container
 COPY . .
 
-# Run Maven to clean, test, and package the application
-RUN mvn clean package -DskipTests
 
 # Use a lightweight JDK image for the runtime
 FROM openjdk:17-jdk-slim
